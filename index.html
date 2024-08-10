@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Questionnaire</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container start-page">
+        <div class="header-icon">
+            <img src="mental_health_icon.png" alt="Mental Health Icon">
+        </div>
+        <h1>Mental Health Questionnaire</h1>
+        <p>This assessment uses standardized questions to give you a sense of your risk for two very common and treatable conditions—anxiety and depression.</p>
+        <button class="begin-button" onclick="startQuiz()">Begin</button>
+    </div>
+
+    <div class="container question-section hidden">
+        <div class="question-card" id="question1">
+            <h2>How often have you felt anxious or worried in the past week?</h2>
+            <button class="answer-button" onclick="nextQuestion('question2', 1)">Never</button>
+            <button class="answer-button" onclick="nextQuestion('question2', 2)">Sometimes</button>
+            <button class="answer-button" onclick="nextQuestion('question2', 3)">Often</button>
+            <button class="answer-button" onclick="nextQuestion('question2', 4)">Always</button>
+        </div>
+
+        <div class="question-card hidden" id="question2">
+            <h2>How often have you felt down, depressed, or hopeless in the past week?</h2>
+            <button class="answer-button" onclick="nextQuestion('question3', 1)">Never</button>
+            <button class="answer-button" onclick="nextQuestion('question3', 2)">Sometimes</button>
+            <button class="answer-button" onclick="nextQuestion('question3', 3)">Often</button>
+            <button class="answer-button" onclick="nextQuestion('question3', 4)">Always</button>
+        </div>
+
+        <div class="question-card hidden" id="question3">
+            <h2>How often have you felt little interest or pleasure in doing things?</h2>
+            <button class="answer-button" onclick="nextQuestion('question4', 1)">Never</button>
+            <button class="answer-button" onclick="nextQuestion('question4', 2)">Sometimes</button>
+            <button class="answer-button" onclick="nextQuestion('question4', 3)">Often</button>
+            <button class="answer-button" onclick="nextQuestion('question4', 4)">Always</button>
+        </div>
+
+        <div class="question-card hidden" id="question4">
+            <h2>How often have you felt unable to control your worries?</h2>
+            <button class="answer-button" onclick="nextQuestion('question5', 1)">Never</button>
+            <button class="answer-button" onclick="nextQuestion('question5', 2)">Sometimes</button>
+            <button class="answer-button" onclick="nextQuestion('question5', 3)">Often</button>
+            <button class="answer-button" onclick="nextQuestion('question5', 4)">Always</button>
+        </div>
+
+        <div class="question-card hidden" id="question5">
+            <h2>How often have you felt that you are not good enough?</h2>
+            <button class="answer-button" onclick="nextQuestion('question6', 1)">Never</button>
+            <button class="answer-button" onclick="nextQuestion('question6', 2)">Sometimes</button>
+            <button class="answer-button" onclick="nextQuestion('question6', 3)">Often</button>
+            <button class="answer-button" onclick="nextQuestion('question6', 4)">Always</button>
+        </div>
+
+        <div class="question-card hidden" id="question6">
+            <h2>How often have you experienced difficulty concentrating?</h2>
+            <button class="answer-button" onclick="nextQuestion('question7', 1)">Never</button>
+            <button class="answer-button" onclick="nextQuestion('question7', 2)">Sometimes</button>
+            <button class="answer-button" onclick="nextQuestion('question7', 3)">Often</button>
+            <button class="answer-button" onclick="nextQuestion('question7', 4)">Always</button>
+        </div>
+
+        <div class="question-card hidden" id="question7">
+            <h2>How often have you had thoughts of hurting yourself?</h2>
+            <button class="answer-button" onclick="nextQuestion('resultPage', 1)">Never</button>
+            <button class="answer-button" onclick="nextQuestion('resultPage', 2)">Sometimes</button>
+            <button class="answer-button" onclick="nextQuestion('resultPage', 3)">Often</button>
+            <button class="answer-button" onclick="nextQuestion('resultPage', 4)">Always</button>
+        </div>
+
+        <div class="question-card hidden" id="resultPage">
+            <h2>Your Mental Health Score</h2>
+            <p id="resultMessage"></p>
+            <div class="support-resources">
+                <h3>Need Immediate Help?</h3>
+                <p>If you are in crisis or need immediate assistance, please reach out to:</p>
+                <ul>
+                    <li><a href="https://www.crisistextline.org" target="_blank">Crisis Text Line</a></li>
+                    <li><a href="https://www.suicidepreventionlifeline.org" target="_blank">Suicide & Crisis Lifeline</a></li>
+                    <li><a href="https://www.mentalhealth.gov" target="_blank">Mental Health.gov</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
